@@ -1,0 +1,39 @@
+{
+  "name": "asaz-server",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^7.5.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.5.4",
+    "socket.io": "^4.5.2",
+    "socket.io-client": "^4.5.1",
+    "stream-chat-react": "^9.5.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start-socket": "nodemon src/socket-server.js",
+    "start-api": "nodemon src/api-server.js"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1"
+  }
+}
