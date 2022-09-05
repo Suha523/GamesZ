@@ -9,14 +9,29 @@ import Login from './components/Login';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Register from './components/Register';
 axios.defaults.withCredentials = true;
+
+const socket = io.connect('http://localhost:3002');
+
 const App = () => {
     const [user, setUser] = useState('');
     const [room, setRoom] = useState('');
-    const socket = io.connect('http://localhost:3002');
+
     const [theme, setTheme] = useState(
         localStorage.getItem('theme') || 'light'
     );
     const [games, setGames] = useState([]);
+
+    useEffect(() => {
+        localStorage.setItem('theme', theme);
+        document.body.className = theme;
+    }, [theme]);
+
+    useEffect(() => {
+        axios.get('http://localhost:4001/games').then((response) => {
+            setGames(response.data);
+        });
+    }, []);
+
     const toggleTheme = () => {
         if (theme === 'light') {
             setTheme('dark');
@@ -27,17 +42,7 @@ const App = () => {
     const joinRoom = () => {
         if (user && room) socket.emit('joinRoom', room);
     };
-    useEffect(() => {
-        localStorage.setItem('theme', theme);
-        document.body.className = theme;
-    }, [theme]);
 
-    useEffect(() => {
-        axios.get('http://localhost:4001/games').then(function (response) {
-            let newGames = response.data;
-            setGames(newGames);
-        }, []);
-    });
     return (
         <div className={`App ${theme}`}>
             <BrowserRouter>
