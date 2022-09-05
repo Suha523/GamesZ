@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const http = require('http'); //socket.io
+const http = require('http'); 
 const cors = require('cors');
 const server = http.createServer(app);
 const { Server } = require('socket.io');
@@ -40,10 +40,6 @@ io.on('connection', (socket) => {
         console.log('user disconnected', socket.id);
     });
 });
-
-// app.get('/', function(req,res){
-//     res.send("dd")
-// })
 
 
 server.listen(3002, () => {
