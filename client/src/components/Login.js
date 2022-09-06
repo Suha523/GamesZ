@@ -33,6 +33,7 @@ export default class Login extends Component {
         }).then((res) => {
             console.log(res);
             if (res.data.Status === 'Done') {
+                sessionStorage.setItem("userName", res.data.userName);
                 this.setState({ headerUserName: res.data.userName });
             } else {
                 this.setState({ headerUserName: 'Wrong userName' });

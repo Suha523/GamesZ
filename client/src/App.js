@@ -8,11 +8,13 @@ import Landing from './components/Landing';
 import Login from './components/Login';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Register from './components/Register';
+import JoinGame from './components/JoinGame';
 axios.defaults.withCredentials = true;
 
 const socket = io.connect('http://localhost:3002');
 
 const App = () => {
+    console.log(sessionStorage);
     const [user, setUser] = useState('');
     const [room, setRoom] = useState('');
 
@@ -58,6 +60,12 @@ const App = () => {
                         exact
                         element={<Register />}
                     ></Route>
+                      <Route
+            exact
+            path="/ticTacToe"
+            element={<Game socket={socket} user={user} room={room} />}
+          ></Route>
+          <Route exact path="/" element={<JoinGame />}></Route>
                 </Routes>
             </BrowserRouter>
             <button onClick={toggleTheme} id="theme"></button>
@@ -76,7 +84,6 @@ const App = () => {
             />
             <button onClick={joinRoom}>Join a room</button>
             <Chat socket={socket} user={user} room={room} />
-            <Game socket={socket} user={user} room={room} />
         </div>
     );
 };
