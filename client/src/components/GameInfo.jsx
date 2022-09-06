@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function GameInfo(props) {
-
     return (
         <div className="game-card">
             <div className="game-img">
@@ -18,8 +17,8 @@ export default function GameInfo(props) {
             <div className="game-header">
                 <h2>{props.game.name}</h2>
                 <p>{props.game.description}</p>
-                <Link to="/game">
-                    <span onClick="">Start Game</span>
+                <Link to="/joinGame">
+                    <span onClick="">Join Game</span>
                 </Link>
             </div>
         </div>

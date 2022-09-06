@@ -51,65 +51,65 @@ export default class Register extends Component {
     };
     render() {
         return (
-           <div className='body'>
-             <div className="container">
-                <div className="title">
-                    <h2>Register Page</h2>
-                </div>
-                <form>
-                    <div className="user-details">
-                        <div className="registerInfo"></div>
-
-                        <div className="input-box">
-                        <span class="details">Name</span>
-                            <input
-                                className="input-box"
-                                type="text"
-                                id="name"
-                                placeholder="Your Name"
-                                onChange={this.fillName}
-                            ></input>
-                        </div>
-                        <div className="input-box">
-                        <span class="details">Username</span>
-                            <input
-                                type="text"
-                                id="userName"
-                                placeholder="Your Username"
-                                onChange={this.fillUserName}
-                            ></input>
-                        </div>
-                        <div className='input-box'>
-                        <span class="details">Email</span>
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="Your E-Mail"
-                            onChange={this.fillEmail}
-                        ></input>
-                        </div>
-                       <div className='input-box'>
-                       <span class="details">Password</span>
-                       <input
-                            className="input-box"
-                            type="password"
-                            id="password"
-                            placeholder="Your Password"
-                            onChange={this.fillPassword}
-                        ></input>
-                       </div>
-                        <div className="button">
-                            <button
-                                id="register"
-                                onClick={this.registerToDataBase}
-                            >
-                                Register
-                            </button>
-                        </div>
+            <div className="body">
+                <div className="container">
+                    <div className="title">
+                        <h2>Register Page</h2>
                     </div>
-                </form>
+                    <form>
+                        <div className="user-details">
+                            <div className="registerInfo"></div>
+
+                            <div className="input-box">
+                                <span class="details">Name</span>
+                                <input
+                                    className="input-box"
+                                    type="text"
+                                    id="name"
+                                    placeholder="Your Name"
+                                    onChange={this.fillName}
+                                ></input>
+                            </div>
+                            <div className="input-box">
+                                <span class="details">Username</span>
+                                <input
+                                    type="text"
+                                    id="userName"
+                                    placeholder="Your Username"
+                                    onChange={this.fillUserName}
+                                ></input>
+                            </div>
+                            <div className="input-box">
+                                <span className="details">Email</span>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="Your E-Mail"
+                                    onChange={this.fillEmail}
+                                ></input>
+                            </div>
+                            <div className="input-box">
+                                <span class="details">Password</span>
+                                <input
+                                    className="input-box"
+                                    type="password"
+                                    id="password"
+                                    placeholder="Your Password"
+                                    onChange={this.fillPassword}
+                                ></input>
+                            </div>
+                            <div className="button">
+                                <button
+                                    id="register"
+                                    onClick={this.registerToDataBase}
+                                >
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-           </div>
         );
     }
 }
