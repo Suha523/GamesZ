@@ -30,15 +30,13 @@ export default function Game({ socket, user, room }) {
       <div className="Game">
         {data == "onePlayer" ? (
           <OffBoard />
-        ) : (
-          <Board
-            socket={socket}
-            user={user}
-            room={room}
-            result={result}
-            setResult={setResult}
-          />
-        )}
+        ) :          <Board
+        socket={socket}
+        user={user}
+        room={room}
+        result={result}
+        setResult={setResult}
+      />}
         {/* <Board
             socket={socket}
             user={user}

@@ -5,7 +5,7 @@ export default function JoinGame() {
      <div className  ="joinGame">
      <div>one player or multiplayer</div>
      <Link to='/ticTacToe'state='onePlayer'>1 player</Link>
-     <Link to='/ticTacToe'>two player</Link>
+     <Link to='/room'>two player</Link>
      </div>
     );
   }
