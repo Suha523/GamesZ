@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 axios.defaults.withCredentials = true;
 
@@ -35,6 +36,7 @@ export default class Login extends Component {
             if (res.data.Status === 'Done') {
                 sessionStorage.setItem("userName", res.data.userName);
                 this.setState({ headerUserName: res.data.userName });
+                window.location.href = "http://localhost:3000/";
             } else {
                 this.setState({ headerUserName: 'Wrong userName' });
             }
@@ -45,6 +47,7 @@ export default class Login extends Component {
             method: 'get',
             url: 'http://localhost:4001/logout',
         });
+        sessionStorage.clear()
         this.firstTimeIn();
     };
     firstTimeIn = () => {
@@ -82,6 +85,10 @@ export default class Login extends Component {
                 <button id="loginButton" onClick={this.logout}>
                     Logout
                 </button>
+                <div>if you do not have an account, register now!
+                    <Link to = "/register">register</Link>
+                    
+                </div>
             </div>
         );
     }

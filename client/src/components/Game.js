@@ -7,6 +7,8 @@ import FlappyBird from "./FlappyBird";
 import OffBoard from "./OffBoard";
 import { useLocation } from "react-router-dom";
 export default function Game({ socket, user, room }) {
+  if(!sessionStorage['userName'])
+  window.location.href = "http://localhost:3000/login";
   const location = useLocation();
   const data = location.state;
   console.log(data);

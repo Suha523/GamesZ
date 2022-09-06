@@ -15,6 +15,7 @@ axios.defaults.withCredentials = true;
 const socket = io.connect('http://localhost:3002');
 
 const App = () => {
+    
     console.log(sessionStorage);
     const [user, setUser] = useState('');
     const [room, setRoom] = useState('');
