@@ -1,3 +1,5 @@
-.game-card{
-    
+.game-container{
+   display: flex;
+   justify-content: center;
+   color: white;
 }
