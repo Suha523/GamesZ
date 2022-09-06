@@ -60,9 +60,10 @@ export default class Login extends Component {
     render() {
         return (
             <div className="login">
-                <div className="login Header">
-                    <h2>{this.state.headerUserName}</h2>
+                <div className="title">
+                    ASAZ GAMES <h2>{this.state.headerUserName}</h2>
                 </div>
+
                 <input
                     type="text"
                     id="userName"
