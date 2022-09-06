@@ -4,7 +4,7 @@ import '../assets/styles/navbar.css'
 
 export default function Navbar() {
     return <div className='navbar'>
-        <div className='logo'>Logo Games</div>
+        <div className='logo'>ASAZ Games</div>
         <div className='nav-links'>
             <Link to='/games'><div className='nav-link'>games</div></Link>
             <Link to='/login'><div className='nav-link'>login</div></Link>

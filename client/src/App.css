@@ -81,7 +81,7 @@
 }
 .pipe {
     position: relative;
-    background-color: var(--green)
+    background-color: var(--green);
 }
 .pipe.down {
     background-size: cover;
