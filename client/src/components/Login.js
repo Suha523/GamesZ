@@ -63,31 +63,34 @@ export default class Login extends Component {
     }
     render() {
         return (
-            <div className="login">
-                <div className="login Header">
-                    <h2>{this.state.headerUserName}</h2>
-                </div>
-                <input
-                    type="text"
-                    id="userName"
-                    placeholder="User Name"
-                    onChange={this.fillUserName}
-                ></input>
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="Password"
-                    onChange={this.fillPassword}
-                ></input>
-                <button id="loginButton" onClick={this.login}>
-                    Login
-                </button>
-                <button id="loginButton" onClick={this.logout}>
-                    Logout
-                </button>
-                <div>
-                    if you do not have an account, register now!
-                    <Link to="/register">register</Link>
+            <div className="login-container">
+                <div className="login">
+                    <h1>login</h1>
+                    <div className="Header">
+                        <h2>{this.state.headerUserName}</h2>
+                    </div>
+                    <input
+                        type="text"
+                        id="userName"
+                        placeholder="User Name"
+                        onChange={this.fillUserName}
+                    ></input>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                        onChange={this.fillPassword}
+                    ></input>
+                    <button onClick={this.login}>
+                        Login
+                    </button>
+                    <button onClick={this.logout}>
+                        Logout
+                    </button>
+                    <div>
+                        if you do not have an account, register now!
+                        <Link to="/register">register</Link>
+                    </div>
                 </div>
             </div>
         );
