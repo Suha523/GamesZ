@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../register.css';
+import '../assets/styles/register.css';
 export default class Register extends Component {
     constructor() {
         super();
