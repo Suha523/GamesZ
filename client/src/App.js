@@ -9,6 +9,8 @@ import Login from './components/Login';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Register from './components/Register';
 import GameInfo from './components/GameInfo';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
 axios.defaults.withCredentials = true;
 
 const socket = io.connect('http://localhost:3002');
@@ -60,11 +62,14 @@ const App = () => {
 
     return (
         <div className={`App ${theme}`}>
+          
             <BrowserRouter>
+            <Navbar />
                 <Routes>
+                    <Route exact path='/' element={<Home />} />
                     <Route
                         exact
-                        path="/"
+                        path="/games"
                         element={
                             games ? (
                                 <Landing
@@ -86,7 +91,7 @@ const App = () => {
                     ></Route>
                 </Routes>
             </BrowserRouter>
-            <button onClick={toggleTheme} id="theme"></button>
+            {/* <button onClick={toggleTheme} id="theme"></button>
             <h3>Join A Chat</h3>
             <input
                 type="text"
@@ -102,7 +107,7 @@ const App = () => {
             />
             <button onClick={joinRoom}>Join a room</button>
             <Chat socket={socket} user={user} room={room} />
-            <Game socket={socket} user={user} room={room} />
+            <Game socket={socket} user={user} room={room} /> */}
         </div>
     );
 };

@@ -1,0 +1,8 @@
+.landing{
+    margin-bottom: 100px;
+}
+
+.games-container{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,5 @@
+.home{
+    height: 100vh;
+    background-image: url('../images/game-ratings-featured.jpg');
+    background-size: cover;
+}

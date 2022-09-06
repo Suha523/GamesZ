@@ -1,0 +1,13 @@
+.navbar{
+    background-color: red;
+    width: 100%;
+    display: grid;  
+}
+
+.nav-links{
+    width: 80%;
+}
+
+.logo{
+    width: 20%;
+}

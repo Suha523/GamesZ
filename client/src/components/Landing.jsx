@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import GameCard from './GameCard';
 import Games from './Games';
+import Home from './Home';
 import Navbar from './Navbar';
+import '../assets/styles/landing.css'
 
 const Landing = (props) => {
     return (
         <div className="landing">
-            <Navbar />
             <Games games={props.games} getGameInfo={props.getGameInfo} />
         </div>
     );

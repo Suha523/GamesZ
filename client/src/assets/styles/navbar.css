@@ -1,0 +1,24 @@
+.navbar {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 'lo li li li li';
+    padding: 10px;
+}
+
+.nav-links {
+    grid-area: 'li';
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.nav-link{
+    margin: 5px;
+}
+
+.logo {
+    grid-area: 'lo';
+    padding: 10px;
+}
