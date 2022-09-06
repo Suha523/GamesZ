@@ -146,26 +146,6 @@ h4 {
     color: #61dafb;
 }
 
-.login {
-    background-color: #f5f7fa;
-    display: grid;
-    grid-template-rows: 1fr 0.5fr 0.5fr 1fr;
-    padding-left: 3%;
-}
-.title {
-    font-size: x-large;
-    margin-top: 8%;
-}
-#userName,
-#password {
-    height: 60%;
-    width: 96%;
-}
-#loginButton {
-    width: 13vh;
-    height: 30%;
-    color: #61dafb;
-}
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
