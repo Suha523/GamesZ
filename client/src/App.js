@@ -8,6 +8,7 @@ import Landing from './components/Landing';
 import Login from './components/Login';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Register from './components/Register';
+import GameInfo from './components/GameInfo';
 axios.defaults.withCredentials = true;
 
 const socket = io.connect('http://localhost:3002');
@@ -20,6 +21,7 @@ const App = () => {
         localStorage.getItem('theme') || 'light'
     );
     const [games, setGames] = useState([]);
+    const [game, setGame] = useState({});
 
     useEffect(() => {
         localStorage.setItem('theme', theme);
@@ -31,6 +33,19 @@ const App = () => {
             setGames(response.data);
         });
     }, []);
+
+    const getGameInfo = (gameId) => {
+        axios
+            .get(`http://localhost:4001/games/${gameId}`)
+            .then((response) => {
+                setGame(response.data);
+            })
+            .catch((error) => {
+                if (!error.response) {
+                    this.errorStatus = 'Error: Network Error';
+                }
+            });
+    };
 
     const toggleTheme = () => {
         if (theme === 'light') {
@@ -49,8 +64,19 @@ const App = () => {
                 <Routes>
                     <Route
                         exact
-                        path="/games"
-                        element={games ? <Landing games={games} /> : null}
+                        path="/"
+                        element={
+                            games ? (
+                                <Landing
+                                    games={games}
+                                    getGameInfo={getGameInfo}
+                                />
+                            ) : null
+                        }
+                    />
+                    <Route
+                        path="/game"
+                        element={games ? <GameInfo game={game} /> : null}
                     />
                     <Route path="/login" exact element={<Login />}></Route>
                     <Route

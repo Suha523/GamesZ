@@ -1,15 +1,9 @@
+import { axios } from 'axios';
 import React from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-axios.defaults.withCredentials = true;
 
-const GameCard = (props) => {
-    const headers = {
-        'Content-Type': 'application/json',
-    };
-    const getGameInfo = () => {
-        props.getGameInfo(props.game._id);
-    };
+export default function GameInfo(props) {
 
     return (
         <div className="game-card">
@@ -23,12 +17,11 @@ const GameCard = (props) => {
             </div>
             <div className="game-header">
                 <h2>{props.game.name}</h2>
+                <p>{props.game.description}</p>
                 <Link to="/game">
-                    <span onClick={getGameInfo}>Go to the game</span>
+                    <span onClick="">Start Game</span>
                 </Link>
             </div>
         </div>
     );
-};
-
-export default GameCard;
+}
