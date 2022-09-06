@@ -1,8 +1,7 @@
 import React from "react";
-export default function Square(props) {
+import { useState } from "react";
+export default function Square({chooseSquare,value}) {
     return (
-      <div className="square_container" onClick={props.chooseSquare}>
-      {props.x ? 'x' : props.o ? 'o' : ''}
-   </div>
+    <span className="square" onClick={chooseSquare}>{value} </span>
     );
   }

@@ -45,6 +45,7 @@ export default function Chat({ socket, user, room }) {
           }}
         />
         <button onClick={sendMessage}>send</button>
+        {messages.map(m=><div>{m.message}</div>)}
       </div>
 
     </div>
