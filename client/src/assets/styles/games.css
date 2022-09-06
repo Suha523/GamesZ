@@ -8,14 +8,6 @@
     --opacity: #f5f7fa51;
 }
 
-.landing{
-    color: var(--white);
-    height: 100vh;
-    margin-bottom: 100px;
-    background-color: var(--black);
-}
-
 .games-container{
-    display: flex;
-    justify-content: center;
+    background-color: var(--black);
 }

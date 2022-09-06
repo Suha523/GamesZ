@@ -12,7 +12,7 @@ import GameInfo from './components/GameInfo';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import JoinGame from './components/JoinGame';
-import Room from './Room';
+import Room from './components/Room';
 
 axios.defaults.withCredentials = true;
 

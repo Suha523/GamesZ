@@ -1,6 +1,6 @@
 import React from 'react'
 import GameCard from '../components/GameCard'
-
+import '../assets/styles/games.css'
 export default function Games(props) {
   return (
     <div className="landing">
