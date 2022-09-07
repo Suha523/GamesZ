@@ -6,3 +6,10 @@
     display: flex;
     justify-content: center;
 }
+
+.landing{
+    color: var(--white);
+    height: 100vh;
+    margin-bottom: 100px;
+    background-color: var(--black);
+}
