@@ -33,7 +33,7 @@ export default class Login extends Component {
             },
         }).then((res) => {
             console.log(res);
-            if (res.data.Status === 'Done') {
+            if (res.data.status === 'Done') {
                 sessionStorage.setItem('userName', res.data.userName);
                 this.setState({ headerUserName: res.data.userName });
                 window.location.href = 'http://localhost:3000/';
@@ -42,7 +42,7 @@ export default class Login extends Component {
             }
         });
     };
-  
+
     firstTimeIn = () => {
         axios({
             method: 'get',
@@ -74,13 +74,15 @@ export default class Login extends Component {
                         placeholder="Password"
                         onChange={this.fillPassword}
                     ></input>
-                    <button onClick={this.login}>
-                        Login
-                    </button>
-                   
+
+                    <button onClick={this.login}>Login</button>
+
                     <div>
-                       <p> if you do not have an account, register now!</p>
-                        <Link to="/register" className='link'> register</Link>
+                        <p> if you do not have an account, register now!</p>
+                        <Link to="/register" className="link">
+                            {' '}
+                            register
+                        </Link>
                     </div>
                 </div>
             </div>
