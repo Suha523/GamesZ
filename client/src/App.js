@@ -13,6 +13,7 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import JoinGame from './components/JoinGame';
 import Room from './components/Room';
+import FlappyBird from './components/FlappyBird';
 
 axios.defaults.withCredentials = true;
 
@@ -128,6 +129,11 @@ const App = () => {
                         exact
                         path="/joinGame"
                         element={<JoinGame />}
+                    ></Route>
+                    <Route
+                        exact
+                        path="/flappy"
+                        element={<FlappyBird />}
                     ></Route>
                 </Routes>
             </BrowserRouter>
