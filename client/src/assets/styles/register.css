@@ -46,37 +46,35 @@
     font-weight: 500;
 }
 
-#register{
-  padding: 5px;
-  height: 30px;
-  background-color: var(--black);
-  color: var(--white);
-  border-radius: 5px;
+#register {
+    padding: 5px;
+    height: 30px;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 600px) {
-  .container {
-      margin-top: 0;
-      flex: none;
-      width: 70%;
-      height: 60%;
-  }
+    .container {
+        margin-top: 0;
+        flex: none;
+        width: 70%;
+        height: 60%;
+    }
 
-  .registerInfo {
-    padding: 10px;
-  }
+    .registerInfo {
+        padding: 10px;
+    }
 
-  .container .title{
-    font-size: 20px;
-  }
+    .container .title {
+        font-size: 20px;
+    }
 
-  .input-box{
-    height: 30px;
-  }
+    .input-box {
+        height: 30px;
+    }
 
-  .container .title{
-    font-weight: 100;
-  }
+    .container .title {
+        font-weight: 100;
+    }
 }
-
-

@@ -75,7 +75,9 @@ export default class Login extends Component {
                         onChange={this.fillPassword}
                     ></input>
 
-                    <button onClick={this.login} className="login-btn">Login</button>
+                    <button onClick={this.login} className="login-btn">
+                        Login
+                    </button>
 
                     <div>
                         <p> if you do not have an account, register now!</p>

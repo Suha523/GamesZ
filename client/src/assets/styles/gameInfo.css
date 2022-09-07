@@ -4,16 +4,16 @@
     color: white;
 }
 
-.link:hover{
-    color: black
+.link:hover {
+    color: black;
 }
 
-.game-header p{
+.game-header p {
     margin-bottom: 20px;
 }
 
 @media screen and (max-width: 780px) {
-    .game-info  {
+    .game-info {
         flex-direction: column;
     }
 

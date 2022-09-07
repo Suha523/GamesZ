@@ -26,7 +26,9 @@ export default function Navbar() {
                 <div>{sessionStorage.userName}</div>
             </div>
             {sessionStorage.userName ? (
-                <button onClick={logout} className="logout-btn" >Logout</button>
+                <button onClick={logout} className="logout-btn">
+                    Logout
+                </button>
             ) : null}
         </div>
     );

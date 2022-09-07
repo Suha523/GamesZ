@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Games from './Games';
 import Home from './Home';
 import Navbar from './Navbar';
-import '../assets/styles/landing.css'
+import '../assets/styles/landing.css';
 
 const Landing = (props) => {
     return (

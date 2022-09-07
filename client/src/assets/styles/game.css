@@ -7,10 +7,9 @@
     --light-blue: #61dafb;
     --opacity: #f5f7fa51;
 }
-.game-container{
+.game-container {
     background: linear-gradient(135deg, var(--blue), var(--purple));
     padding: 25px;
     display: flex;
     justify-content: center;
 }
-

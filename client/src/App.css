@@ -1,5 +1,3 @@
-
-
 :root {
     --blue: #1e90ff;
     --white: #ffffff;
@@ -100,7 +98,6 @@
     background: none;
     border: none;
 }
-
 
 .Messages {
     border: 2px solid var(--light-gray);

@@ -1,5 +1,4 @@
-
-.room{
+.room {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,21 +7,21 @@
     margin-top: 20px;
 }
 
-.inputs{
+.inputs {
     margin-top: 10px;
     margin-bottom: 20px;
     display: flex;
 }
 
-.inputs input, .inputs button{
+.inputs input,
+.inputs button {
     height: 30px;
     width: 100%;
     padding: 2px;
     margin: 5px;
-
 }
 
-.join-btn{
+.join-btn {
     background-color: black;
     border-radius: 5px;
     color: white;

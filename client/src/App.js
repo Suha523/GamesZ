@@ -65,11 +65,10 @@ const App = () => {
 
     return (
         <div className={`App ${theme}`}>
-          
             <BrowserRouter>
-            <Navbar />
+                <Navbar />
                 <Routes>
-                    <Route exact path='/' element={<Home />} />
+                    <Route exact path="/" element={<Home />} />
                     <Route
                         exact
                         path="/games"
@@ -92,13 +91,30 @@ const App = () => {
                         exact
                         element={<Register />}
                     ></Route>
-                      <Route
-            exact
-            path="/ticTacToe"
-            element={<Game socket={socket} user={user} room={room} />}
-          ></Route>
-          <Route path='/room' element={<Room joinRoom={joinRoom}user={user}room={room} setRoom={setRoom}setUser={setUser}></Room>}></Route>
-          <Route exact path="/joinGame" element={<JoinGame />}></Route>
+                    <Route
+                        exact
+                        path="/ticTacToe"
+                        element={
+                            <Game socket={socket} user={user} room={room} />
+                        }
+                    ></Route>
+                    <Route
+                        path="/room"
+                        element={
+                            <Room
+                                joinRoom={joinRoom}
+                                user={user}
+                                room={room}
+                                setRoom={setRoom}
+                                setUser={setUser}
+                            ></Room>
+                        }
+                    ></Route>
+                    <Route
+                        exact
+                        path="/joinGame"
+                        element={<JoinGame />}
+                    ></Route>
                 </Routes>
             </BrowserRouter>
         </div>

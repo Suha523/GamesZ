@@ -14,21 +14,21 @@
     padding: 5px;
 }
 
-.userName{
+.userName {
     grid-area: 'un';
     padding: 10px;
 }
 
-.nav-link{
+.nav-link {
     margin: 5px;
 }
 
-.navbar-link{
+.navbar-link {
     text-decoration: none;
     color: white;
 }
 
-.navbar-link:hover{
+.navbar-link:hover {
     color: blue;
 }
 
@@ -36,7 +36,7 @@
     grid-area: 'lo';
     padding: 10px;
 }
-.logout-btn{
+.logout-btn {
     background-color: black;
     border-radius: 5px;
     color: white;
