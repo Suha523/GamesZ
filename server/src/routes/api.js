@@ -4,9 +4,9 @@ const Game = require('../models/Game');
 const User = require('../models/User');
 const UserGame = require('../models/UserGame');
 // const dummyUsers = require("../dummy/users");
-const dummyGames = require('../dummy/games');
+
 // dummyUsers()
-// dummyGames()
+
 
 router.get('/users/:userId', function (req, res) {
     // to get a user for login
@@ -62,15 +62,15 @@ router.post('/register', function (req, res) {
     res.end();
 });
 
-router.post('/games', function (req, res) {
-    // add game
-    const games = dummyGames();
-    games.forEach((g) => {
-        let newGame = new Game(g);
-        newGame.save();
-    });
-    res.end();
-});
+// router.post('/games', function (req, res) {
+//     // add game
+//     const games = dummyGames();
+//     games.forEach((g) => {
+//         let newGame = new Game(g);
+//         newGame.save();
+//     });
+//     res.end();
+// });
 
 router.get('/games', function (req, res) {
     // to show all games

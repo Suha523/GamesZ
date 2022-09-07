@@ -2,17 +2,22 @@ const { faker } = require('@faker-js/faker');
 const Game = require('../models/Game');
 
 const makeGames = function () {
-    let games = [];
-    let gamesNumber = 3;
-    for (let i = 0; i < gamesNumber; i++) {
-        let game = {
-            name: faker.word.noun(),
-            thumbnail: faker.image.image(),
-            description: faker.random.words(10),
+    let games = [
+        {
+            name: 'Tic Tac Toe',
+            thumbnail:
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/280px-Tic_tac_toe.svg.png',
+            description: 'Play with your friens or computer AI',
             time: faker.date.recent(),
-        };
-        games.push(game);
-    }
+        },
+        {
+            name: 'Flappy Bird',
+            thumbnail: 'http://nebez.github.io/floppybird/assets/thumb.png',
+            description: 'Fly with limits',
+            time: faker.date.recent(),
+        },
+    ];
+
     return games;
 };
 
