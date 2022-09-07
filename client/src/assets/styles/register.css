@@ -47,7 +47,36 @@
 }
 
 #register{
-  padding: 2px;
+  padding: 5px;
+  height: 30px;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+      margin-top: 0;
+      flex: none;
+      width: 70%;
+      height: 60%;
+  }
+
+  .registerInfo {
+    padding: 10px;
+  }
+
+  .container .title{
+    font-size: 20px;
+  }
+
+  .input-box{
+    height: 30px;
+  }
+
+  .container .title{
+    font-weight: 100;
+  }
 }
 
 

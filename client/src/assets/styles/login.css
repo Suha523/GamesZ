@@ -26,9 +26,9 @@
     padding: 30px;
     border-radius: 10px;
 }
-.title {
+/* .title {
     font-size: x-large;
-}
+} */
 
 .login button,
 .login #userName,
@@ -40,12 +40,38 @@
     margin: 10px;
     outline: none;
     border: none;
-
 }
 
-.login .login-btn{
+.login .login-btn {
     width: 30%;
     background-color: var(--black);
     padding: 5px;
     color: var(--white);
+}
+
+@media screen and (max-width: 600px) {
+    .login {
+        margin-top: 0;
+        flex: none;
+        width: 70%;
+        height: 60%;
+    }
+
+    .login button,
+    .login #userName,
+    .login #password {
+        height: 60%;
+    }
+    p {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .login {
+        margin-top: 0;
+        flex: none;
+        width: 70%;
+        height: 40%;
+    }
 }
