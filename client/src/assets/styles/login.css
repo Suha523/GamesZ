@@ -26,9 +26,15 @@
     padding: 30px;
     border-radius: 10px;
 }
-/* .title {
-    font-size: x-large;
-} */
+.register-link{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+}
+
+.register-link:hover{
+  color: black;
+}
 
 .login button,
 .login #userName,

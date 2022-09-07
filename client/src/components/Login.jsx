@@ -70,7 +70,7 @@ export default class Login extends Component {
 
                     <div>
                         <p> if you do not have an account, register now!</p>
-                        <Link to="/register" className="link">
+                        <Link to="/register" className="register-link">
                             {' '}
                             register
                         </Link>
