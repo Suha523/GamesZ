@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 :root {
     --blue: #1e90ff;
     --white: #ffffff;
@@ -10,8 +12,14 @@
     --light-blue: #61dafb;
 }
 
+@font-face {
+    font-family: cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+}
+
 .App {
     text-align: center;
+    font-family: cursive;
 }
 .App-logo {
     height: 40vmin;
