@@ -17,7 +17,6 @@
     border-radius: 5px;
     animation-name: game-card;
     animation-duration: 0.9s;
-    animation-delay: 2s;
     animation-iteration-count: infinite;
 }
 
@@ -39,8 +38,10 @@
 @keyframes game-card {
     from {
         transform: scale(1.1);
+        transition: ease-out;
     }
     to {
+        transition: ease-in;
         transform: scale(1);
     }
 }
