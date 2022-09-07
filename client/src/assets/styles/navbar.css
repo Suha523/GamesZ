@@ -36,3 +36,9 @@
     grid-area: 'lo';
     padding: 10px;
 }
+.logout-btn{
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+}

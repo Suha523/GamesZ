@@ -23,7 +23,7 @@ export default function Room({ setUser, setRoom,user,room,joinRoom }) {
                 onChange={(e) => setRoom(e.target.value)}
             />
           </div>
-           <Link to='/ticTacToe'> <button onClick={joinRoom}>Join a room</button></Link>
+           <Link to='/ticTacToe'> <button onClick={joinRoom} className="join-btn" >Join a room</button></Link>
         </div>
     );
 }
