@@ -6,6 +6,8 @@ import Confetti from 'react-confetti';
 import FlappyBird from './FlappyBird';
 import OffBoard from './offBoard';
 import { useLocation } from 'react-router-dom';
+import '../assets/styles/game.css'
+
 export default function Game({ socket, user, room }) {
     if (!sessionStorage['userName'])
         window.location.href = 'http://localhost:3000/login';
@@ -26,7 +28,7 @@ export default function Game({ socket, user, room }) {
     };
     const { width, height } = useWindowSize();
     return (
-        <div>
+        <div className='game-container'>
             <div className="Game">
                 {data == 'onePlayer' ? (
                     <OffBoard />

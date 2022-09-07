@@ -1,9 +1,11 @@
 .joinGame {
-    height: 400px;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(67, 67, 245);
+    color: white;
 }
 
 .options {
@@ -17,4 +19,5 @@
 
 .link {
     text-decoration: none;
+    color: white;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import Chat from './Chat';
 import Square from './Square';
-
+import '../assets/styles/board.css'
 export default function Board({ socket, user, room, result, setResult }) {
     const [board, setBoard] = useState(['', '', '', '', '', '', '', '', '']);
     const [player, setPlayer] = useState('X');

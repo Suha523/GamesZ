@@ -98,12 +98,7 @@
     border: none;
 }
 
-.Game {
-    padding: 10px;
-    width: 50%;
-    margin-left: 35%;
-    margin-right: 25%;
-}
+
 .Messages {
     border: 2px solid var(--light-gray);
     background-color: var(--white);
@@ -112,38 +107,6 @@
     margin: 10px 0;
 }
 
-.board-container {
-    width: 500px;
-    height: 500px;
-    background-color: var(--white);
-    border: 1px solid var(--black);
-    display: flex;
-    flex-direction: column;
-}
-.row {
-    flex: 33%;
-    display: flex;
-    flex-direction: row;
-}
-.square {
-    flex: 33%;
-    height: 100%;
-    border: 1px solid var(--black);
-    cursor: pointer;
-    display: grid;
-    place-items: center;
-    font-size: 30px;
-    color: var(--black);
-    font-family: Arial, Helvetica, sans-serif;
-}
-.square:active {
-    background-color: var(--light-gray);
-}
-h4 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--gray);
-    font-size: 30px;
-}
 .App-header {
     background-color: #282c34;
     min-height: 100vh;

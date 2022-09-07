@@ -1,0 +1,13 @@
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --purple: #752e91;
+    --light-gray: #dedede;
+    --black: black;
+    --light-blue: #61dafb;
+    --opacity: #f5f7fa51;
+}
+.game-container{
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    padding: 25px;
+}

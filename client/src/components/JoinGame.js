@@ -9,10 +9,10 @@ export default function JoinGame() {
       <h2>one player or multiplayer? </h2>
       <div className="options">
         <Link to="/ticTacToe" state="onePlayer" className="link">
-          <div className="option">one player</div>
+          <div className="option"><i className="fa-solid fa-arrow-right"></i>  one player</div>
         </Link>
         <Link to="/room" className="link">
-          <div className="option">two players</div>
+          <div className="option"><i className="fa-solid fa-arrow-right"></i>  two players</div>
         </Link>
       </div>
     </div>
