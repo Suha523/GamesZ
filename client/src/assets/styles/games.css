@@ -1,7 +1,7 @@
 :root {
-    --blue: #1e90ff;
+    --blue: #52a5f7;
     --white: #ffffff;
-    --purple: #752e91;
+    --purple: #ad8fff;
     --light-gray: #dedede;
     --black: black;
     --light-blue: #61dafb;
@@ -17,10 +17,16 @@
 .game-card {
     width: 25%;
     height: 450px;
-    border: 1px var(--black) solid;
+    cursor: pointer;
+    border: none;
     margin: 30px;
     background: linear-gradient(135deg, var(--blue), var(--purple));
-    border-radius: 5px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 1px #bebebe;
+    animation: game-card;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 2000ms;
 }
 
 @media screen and (max-width: 600px) {

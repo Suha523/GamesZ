@@ -1,7 +1,21 @@
 .game-info {
     display: flex;
     justify-content: center;
-    color: white;
+}
+
+.game-card {
+    width: 25%;
+    height: 450px;
+    cursor: pointer;
+    border: none;
+    margin: 20.2px;
+    background: linear-gradient(135deg, #52a5f7, #ad8fff);
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 1px #bebebe;
+    animation: game-card;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 2000ms;
 }
 
 .link:hover {

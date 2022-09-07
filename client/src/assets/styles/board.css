@@ -1,12 +1,16 @@
 .board-container {
-    width: 500px;
-    height: 500px;
+    width: 85vw;
+    height: 60vh;
+
     background-color: var(--white);
     border: 1px solid var(--black);
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 .row {
+    width: 100%;
     flex: 33%;
     display: flex;
     flex-direction: row;

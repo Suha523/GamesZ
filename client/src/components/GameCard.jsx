@@ -24,8 +24,8 @@ const GameCard = (props) => {
             </div>
             <div className="game-header">
                 <h2>{props.game.name}</h2>
-                <Link to="/game" className="link">
-                    <span onClick={getGameInfo}>Go to the game</span>
+                <Link to="/game" className="go-to-game">
+                    <span onClick={getGameInfo}><p>Go to the game</p></span>
                 </Link>
             </div>
         </div>

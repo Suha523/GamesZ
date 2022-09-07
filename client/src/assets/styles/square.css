@@ -5,8 +5,9 @@
     cursor: pointer;
     display: grid;
     place-items: center;
-    font-size: 30px;
+    font-size: 40px;
     color: var(--black);
+    width: 100%;
 }
 .square:active {
     background-color: var(--light-gray);

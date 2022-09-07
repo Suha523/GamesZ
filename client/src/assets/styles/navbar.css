@@ -1,10 +1,17 @@
 .navbar {
-    background-color: black;
+    background-color: #ad8fff;
     color: white;
+    font-weight: 500;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas: 'lo li li li li un';
     padding: 10px;
+    height: 10%;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px #d4d4d440;
+    align-items: center;
+    font-size: x-large;
 }
 
 .nav-links {
@@ -17,6 +24,8 @@
 .userName {
     grid-area: 'un';
     padding: 10px;
+    width: 100%;
+    margin-right: 25px;
 }
 
 .nav-link {
@@ -37,8 +46,8 @@
     padding: 10px;
 }
 .logout-btn {
-    background-color: black;
+    background-color: #ffff;
     border-radius: 5px;
-    color: white;
-    padding: 5px;
+    color: #ad8fff;
+    line-height: 40px;
 }
