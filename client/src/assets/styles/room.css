@@ -1,0 +1,32 @@
+.room{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.room{
+    margin-top: 20px;
+}
+
+.inputs{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.inputs input, button{
+    height: 30px;
+    width: 100%;
+    padding: 2px;
+    margin: 5px;
+
+}
+
+button{
+    background-color: black;
+    border-radius: 5px;
+    width: 30%;
+    color: white;
+}

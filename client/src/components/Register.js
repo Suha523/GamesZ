@@ -51,17 +51,13 @@ export default class Register extends Component {
     };
     render() {
         return (
-           <div className='body'>
-             <div className="container">
-                <div className="title">
-                    <h2>Register Page</h2>
-                </div>
-                <form>
-                    <div className="user-details">
-                        <div className="registerInfo"></div>
-
-                        <div className="input-box">
-                        <span class="details">Name</span>
+            <div className="body">
+                <div className="container">
+                    <div className="title">
+                        <h2>Register Page</h2>
+                    </div>
+                    <form>
+                        <div className="registerInfo">
                             <input
                                 className="input-box"
                                 type="text"
@@ -69,35 +65,32 @@ export default class Register extends Component {
                                 placeholder="Your Name"
                                 onChange={this.fillName}
                             ></input>
-                        </div>
-                        <div className="input-box">
-                        <span class="details">Username</span>
+
                             <input
+                                className="input-box"
                                 type="text"
                                 id="userName"
                                 placeholder="Your Username"
                                 onChange={this.fillUserName}
                             ></input>
+
+                            <input
+                                className="input-box"
+                                type="email"
+                                id="email"
+                                placeholder="Your E-Mail"
+                                onChange={this.fillEmail}
+                            ></input>
+
+                            <input
+                                className="input-box"
+                                type="password"
+                                id="password"
+                                placeholder="Your Password"
+                                onChange={this.fillPassword}
+                            ></input>
                         </div>
-                        <div className='input-box'>
-                        <span class="details">Email</span>
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="Your E-Mail"
-                            onChange={this.fillEmail}
-                        ></input>
-                        </div>
-                       <div className='input-box'>
-                       <span class="details">Password</span>
-                       <input
-                            className="input-box"
-                            type="password"
-                            id="password"
-                            placeholder="Your Password"
-                            onChange={this.fillPassword}
-                        ></input>
-                       </div>
+
                         <div className="button">
                             <button
                                 id="register"
@@ -106,10 +99,9 @@ export default class Register extends Component {
                                 Register
                             </button>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-           </div>
         );
     }
 }

@@ -3,7 +3,7 @@ import GameCard from '../components/GameCard'
 import '../assets/styles/games.css'
 export default function Games(props) {
   return (
-    <div className="landing">
+    <div className="games">
       <h1>games</h1>
       <p>
         Games take you to another world

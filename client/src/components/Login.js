@@ -42,14 +42,7 @@ export default class Login extends Component {
             }
         });
     };
-    logout = () => {
-        axios({
-            method: 'get',
-            url: 'http://localhost:4001/logout',
-        });
-        sessionStorage.clear();
-        this.firstTimeIn();
-    };
+  
     firstTimeIn = () => {
         axios({
             method: 'get',
@@ -84,12 +77,10 @@ export default class Login extends Component {
                     <button onClick={this.login}>
                         Login
                     </button>
-                    <button onClick={this.logout}>
-                        Logout
-                    </button>
+                   
                     <div>
-                        if you do not have an account, register now!
-                        <Link to="/register">register</Link>
+                       <p> if you do not have an account, register now!</p>
+                        <Link to="/register" className='link'> register</Link>
                     </div>
                 </div>
             </div>

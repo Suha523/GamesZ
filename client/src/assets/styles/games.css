@@ -10,5 +10,11 @@
 
 .games-container {
     padding: 10px;
+    display: flex;
+    justify-content: center;
 }
+
+/* .games{
+    background-color: black;
+} */
 

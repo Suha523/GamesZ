@@ -23,20 +23,24 @@
     width: 50%;
     justify-items: center;
     height: 70%;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
 }
 .title {
     font-size: x-large;
 }
-#userName,
-#password,
-.login button {
+
+.login button,
+.login #userName,
+.login #password {
     height: 40px;
     width: 100%;
-    padding: 5px;
-    border-radius: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
     margin: 10px;
+    outline: none;
+    border: none;
+
 }
 
 .login button {
