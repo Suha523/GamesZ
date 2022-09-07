@@ -1,6 +1,13 @@
-.game-container {
+.game-info {
     display: flex;
     justify-content: center;
     color: white;
 }
-  
+
+.link:hover{
+    color: black
+}
+
+.game-header p{
+    margin-bottom: 20px;
+}

@@ -6,7 +6,7 @@ import '../assets/styles/gameInfo.css';
 
 export default function GameInfo(props) {
     return (
-        <div className="game-container">
+        <div className="game-info">
             <div className="game-card">
                 <div className="game-img">
                     <img
@@ -19,7 +19,7 @@ export default function GameInfo(props) {
                 <div className="game-header">
                     <h2>{props.game.name}</h2>
                     <p>{props.game.description}</p>
-                    <Link to="/joinGame">
+                    <Link to="/joinGame" className='link'>
                         <span onClick="">Join Game</span>
                     </Link>
                 </div>
