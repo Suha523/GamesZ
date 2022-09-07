@@ -7,7 +7,12 @@ export default function Board({ socket, user, room, result, setResult }) {
     const [board, setBoard] = useState(['', '', '', '', '', '', '', '', '']);
     const [player, setPlayer] = useState('X');
     const [turn, setTurn] = useState('X');
-    let flag = true;
+    const [isWinner, setWinner] = useState(false);
+    const [flag, setFlag] = useState(true);
+    const restart = () => {
+        setBoard(['', '', '', '', '', '', '', '', '']);
+        setTurn('X');
+    };
     const Patterns = [
         [0, 1, 2],
         [3, 4, 5],
@@ -89,7 +94,7 @@ export default function Board({ socket, user, room, result, setResult }) {
                     state: 'none',
                     player2: data.author,
                 });
-            flag = false;
+            setFlag(false);
         }
         setBoard(
             board.map((b, index) => {
@@ -147,6 +152,9 @@ export default function Board({ socket, user, room, result, setResult }) {
                     />
                 </div>
             </div>
+            {isWinner ? (
+                <button onClick={restart}>restart the game</button>
+            ) : null}
         </div>
     );
 }

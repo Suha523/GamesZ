@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../assets/styles/chat.css';
 export default function Chat({ socket, user, room }) {
     const [currentMessage, setCurrentMessage] = useState('');
     const [messages, setMessages] = useState([]);
@@ -13,28 +14,30 @@ export default function Chat({ socket, user, room }) {
                     ':' +
                     new Date(Date.now()).getMinutes(),
             };
-            let newMessages = [...messages];
-            newMessages.push(messageData);
-            setMessages(newMessages);
             await socket.emit('sendMessage', messageData);
+            let newMessages = [...messages, messageData];
+            setMessages(newMessages);
         }
     };
 
     useEffect(() => {
         socket.on('receive_message', (data) => {
-            let newMessages = [...messages];
-            newMessages.push(data);
+            let newMessages = [...messages, data];
             setMessages(newMessages);
             //   setMessageList((list) => [...list, data]);
         });
     }, [socket]);
 
     return (
-        <div>
+        <div className="chat-window">
             <div className="chat-header">
                 <p>Live Chat</p>
             </div>
-            <div className="chat-body"></div>
+            <div className="chat-body">
+                {messages.map((m) => (
+                    <h3>{m.message}</h3>
+                ))}
+            </div>
             <div className="chat-footer">
                 <input
                     type="text"
@@ -45,9 +48,6 @@ export default function Chat({ socket, user, room }) {
                     }}
                 />
                 <button onClick={sendMessage}>send</button>
-                {messages.map((m) => (
-                    <div>{m.message}</div>
-                ))}
             </div>
         </div>
     );

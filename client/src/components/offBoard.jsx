@@ -27,6 +27,10 @@ export default function OffBoard() {
         [0, 4, 8],
         [2, 4, 6],
     ];
+    const restartGame = () => {
+        setsquares(['', '', '', '', '', '', '', '', '']);
+        setWinner('');
+    };
     const computer_turn = (index) => {
         let newSquares = [...squares];
         newSquares[index] = 'o';
@@ -66,17 +70,17 @@ export default function OffBoard() {
             setWinner('o');
         }
         if (isComputerTurn) {
-            const winBlock1 = winning_lines('x', 'x', '');
-            if (winBlock1.length > 0) {
-                const blockIndex = winBlock1[0].filter(
+            const winBlock2 = winning_lines('o', 'o', '');
+            if (winBlock2.length > 0) {
+                const blockIndex = winBlock2[0].filter(
                     (index) => squares[index] === ''
                 )[0];
                 computer_turn(blockIndex);
                 return;
             }
-            const winBlock2 = winning_lines('o', 'o', '');
-            if (winBlock2.length > 0) {
-                const blockIndex = winBlock2[0].filter(
+            const winBlock1 = winning_lines('x', 'x', '');
+            if (winBlock1.length > 0) {
+                const blockIndex = winBlock1[0].filter(
                     (index) => squares[index] === ''
                 )[0];
                 computer_turn(blockIndex);
@@ -149,7 +153,10 @@ export default function OffBoard() {
             ) : winner && winner === 'o' ? (
                 <div>you lost</div>
             ) : null}
-            {winner ? <Confetti width={width} height={height} /> : null}
+            {winner && winner === 'x' ? (
+                <Confetti width={width} height={height} />
+            ) : null}
+            {<button onClick={restartGame}>restart the game</button>}
         </div>
     );
 }
