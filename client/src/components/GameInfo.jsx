@@ -20,15 +20,16 @@ export default function GameInfo(props) {
                     <h2>{props.game.name}</h2>
                     <p>{props.game.description}</p>
                     <Link
+                        className="link"
                         to={
-                            props.game.name == 'tic tac toe'
+                            props.game.name == 'Tic Tac Toe'
                                 ? '/joinGame'
-                                : props.game.name == 'flappy Bird'
+                                : props.game.name == 'Flappy Bird'
                                 ? '/flappy'
                                 : '/game'
                         }
                     >
-                        <span onClick="">Join Game</span>
+                        <span>Join Game</span>
                     </Link>
                 </div>
             </div>
