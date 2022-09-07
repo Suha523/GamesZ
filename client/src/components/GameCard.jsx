@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 axios.defaults.withCredentials = true;
-import '../assets/styles/gameCard.css'
+import '../assets/styles/gameCard.css';
 
 const GameCard = (props) => {
     const headers = {
@@ -13,7 +13,7 @@ const GameCard = (props) => {
     };
 
     return (
-        <div className="game-card">
+        <div>
             <div className="game-img">
                 <img
                     alt="game"
@@ -24,7 +24,7 @@ const GameCard = (props) => {
             </div>
             <div className="game-header">
                 <h2>{props.game.name}</h2>
-                <Link to="/game" className='link'>
+                <Link to="/game" className="link">
                     <span onClick={getGameInfo}>Go to the game</span>
                 </Link>
             </div>

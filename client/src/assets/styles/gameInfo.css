@@ -11,3 +11,14 @@
 .game-header p{
     margin-bottom: 20px;
 }
+
+@media screen and (max-width: 780px) {
+    .game-info  {
+        flex-direction: column;
+    }
+
+    .game-card {
+        width: 90%;
+        height: 500px;
+    }
+}

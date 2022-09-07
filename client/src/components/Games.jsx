@@ -9,7 +9,8 @@ export default function Games(props) {
         Games take you to another world
       </p>
       <div className="games-container">
-          {props.games.map((g, key) => <GameCard key={key}  game={g} getGameInfo={props.getGameInfo}/>)}
+          {props.games.map((g, key) => 
+          <div className='game-card'><GameCard key={key}  game={g} getGameInfo={props.getGameInfo}/></div>)}
       </div>
     </div>
   )
