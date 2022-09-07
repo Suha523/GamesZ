@@ -35,25 +35,14 @@ export default class Login extends Component {
             console.log(res);
             if (res.data.status === 'Done') {
                 sessionStorage.setItem('userName', res.data.userName);
-                this.setState({ headerUserName: res.data.userName });
+                this.props.setHeaderName(res.data.userName);
                 window.location.href = 'http://localhost:3000/';
             } else {
-                this.setState({ headerUserName: 'Wrong userName' });
+                this.props.setHeaderName('Wrong userName');
             }
         });
     };
 
-    firstTimeIn = () => {
-        axios({
-            method: 'get',
-            url: 'http://localhost:4001/user',
-        }).then((res) => {
-            this.setState({ headerUserName: res.data });
-        });
-    };
-    componentDidMount() {
-        this.firstTimeIn();
-    }
     render() {
         return (
             <div className="login-container">

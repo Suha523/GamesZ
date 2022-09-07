@@ -27,7 +27,7 @@ const App = () => {
     );
     const [games, setGames] = useState([]);
     const [game, setGame] = useState({});
-
+    const [headerUserName, setHeaderName] = useState('');
     useEffect(() => {
         localStorage.setItem('theme', theme);
         document.body.className = theme;
@@ -38,7 +38,17 @@ const App = () => {
             setGames(response.data);
         });
     }, []);
-
+    const firstTimeIn = () => {
+        axios({
+            method: 'get',
+            url: 'http://localhost:4001/user',
+        }).then((res) => {
+            setHeaderName(res.data);
+        });
+    };
+    useEffect(() => {
+        firstTimeIn();
+    });
     const getGameInfo = (gameId) => {
         axios
             .get(`http://localhost:4001/games/${gameId}`)
@@ -66,7 +76,7 @@ const App = () => {
     return (
         <div className={`App ${theme}`}>
             <BrowserRouter>
-                <Navbar />
+                <Navbar firstTimeIn={firstTimeIn} />
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route
@@ -85,7 +95,11 @@ const App = () => {
                         path="/game"
                         element={games ? <GameInfo game={game} /> : null}
                     />
-                    <Route path="/login" exact element={<Login />}></Route>
+                    <Route
+                        path="/login"
+                        exact
+                        element={<Login setHeaderName={setHeaderName} />}
+                    ></Route>
                     <Route
                         path="/register"
                         exact

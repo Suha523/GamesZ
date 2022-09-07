@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/navbar.css';
 import axios from 'axios';
-export default function Navbar() {
+export default function Navbar(props) {
     const logout = () => {
         axios({
             method: 'get',
             url: 'http://localhost:4001/logout',
         });
         sessionStorage.clear();
-        // this.firstTimeIn();
+        props.firstTimeIn();
     };
     return (
         <div className="navbar">
@@ -26,9 +26,9 @@ export default function Navbar() {
                 <div>{sessionStorage.userName}</div>
             </div>
             {sessionStorage.userName ? (
-                <button onClick={logout} className="logout-btn">
+                <div onClick={logout} className="logout-btn">
                     Logout
-                </button>
+                </div>
             ) : null}
         </div>
     );
