@@ -43,6 +43,9 @@
 
 }
 
-.login button {
+.login .login-btn{
     width: 30%;
+    background-color: var(--black);
+    padding: 5px;
+    color: var(--white);
 }
