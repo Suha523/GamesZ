@@ -1,0 +1,20 @@
+.joinGame {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.options {
+    display: flex;
+}
+
+.option {
+    text-decoration: none;
+    margin: 10px;
+}
+
+.link {
+    text-decoration: none;
+}

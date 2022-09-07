@@ -1,13 +1,20 @@
-import React from 'react';
-import {Link ,BrowserRouter as Router} from 'react-router-dom'
+import React from "react";
+import { Link, BrowserRouter as Router } from "react-router-dom";
+import "../assets/styles/joinGame.css";
 export default function JoinGame() {
-  if(!sessionStorage['userName'])
-  window.location.href = "http://localhost:3000/login";
-    return (
-     <div className  ="joinGame">
-     <div>one player or multiplayer</div>
-     <Link to='/ticTacToe'state='onePlayer'>1 player</Link>
-     <Link to='/room'>two player</Link>
-     </div>
-    );
-  }
+  if (!sessionStorage["userName"])
+    window.location.href = "http://localhost:3000/login";
+  return (
+    <div className="joinGame">
+      <h2>one player or multiplayer? </h2>
+      <div className="options">
+        <Link to="/ticTacToe" state="onePlayer" className="link">
+          <div className="option">one player</div>
+        </Link>
+        <Link to="/room" className="link">
+          <div className="option">two players</div>
+        </Link>
+      </div>
+    </div>
+  );
+}

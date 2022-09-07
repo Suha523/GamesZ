@@ -2,14 +2,12 @@
     --blue: #1e90ff;
     --white: #ffffff;
     --purple: #752e91;
-    --dark-gray: #333;
-    --greenyellow: greenyellow;
-    --green: green;
     --light-gray: #dedede;
     --black: black;
     --light-blue: #61dafb;
+    --opacity: #f5f7fa51;
 }
 
-h1, h2, h3, h4, h5, h6{
-    text-transform: capitalize;
+.games-container {
+    background-color: var(--black);
 }

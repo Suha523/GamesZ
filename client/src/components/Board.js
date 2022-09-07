@@ -99,8 +99,7 @@ export default function Board({ socket, user, room, result, setResult }) {
             })
         );
     });
-console.log(user);
-console.log(room);
+
     return (
         <div>
             <Chat socket={socket} user={user} room={room} />
@@ -151,4 +150,3 @@ console.log(room);
         </div>
     );
 }
-
