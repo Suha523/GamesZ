@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 :root {
     --blue: #1e90ff;
@@ -12,7 +12,12 @@
     --light-blue: #61dafb;
 }
 
+@font-face {
+    font-family: cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+}
+
 h1, h2, h3, h4, h5, h6, p{
     text-transform: capitalize;
-    font-family: 'Dancing';
+    font-family: cursive;
 }
