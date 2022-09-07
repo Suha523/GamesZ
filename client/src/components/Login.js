@@ -33,7 +33,7 @@ export default class Login extends Component {
             },
         }).then((res) => {
             console.log(res);
-            if (res.data.Status === 'Done') {
+            if (res.data.status === 'Done') {
                 sessionStorage.setItem('userName', res.data.userName);
                 this.setState({ headerUserName: res.data.userName });
                 window.location.href = 'http://localhost:3000/';
@@ -81,12 +81,8 @@ export default class Login extends Component {
                         placeholder="Password"
                         onChange={this.fillPassword}
                     ></input>
-                    <button onClick={this.login}>
-                        Login
-                    </button>
-                    <button onClick={this.logout}>
-                        Logout
-                    </button>
+                    <button onClick={this.login}>Login</button>
+                    <button onClick={this.logout}>Logout</button>
                     <div>
                         if you do not have an account, register now!
                         <Link to="/register">register</Link>
