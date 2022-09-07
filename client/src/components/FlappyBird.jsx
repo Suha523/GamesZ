@@ -1,12 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import Bird from './Bird';
 import GameBox from './GameBox';
+import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 export default function FlappyBird() {
+    const [userGame, setUserGame] = useState('');
+    const location = useLocation();
+    const data = location.state;
+    if (!sessionStorage['userName'])
+        window.location.href = 'http://localhost:3000/login';
     const GRAVITY = 6;
     const JUMPHEGHIT = 100;
     const PIPE_WIDTH = 60;
     const PIPE_GAP = 200;
-
+    useEffect(() => {
+        axios
+            .post('http://localhost:4001/userGames', {
+                userId: sessionStorage['userId'],
+                gameId: data,
+            })
+            .then((data) => setUserGame(data.data._id));
+    }, []);
     const [birdPosition, setBirdPosition] = useState(350);
     const [gameHasStarted, setGameStarted] = useState(false);
     const [pipeHeghit, setPipeHeghit] = useState(200);
@@ -50,6 +64,10 @@ export default function FlappyBird() {
             pipeLeft <= PIPE_WIDTH &&
             (touchTopPipe || touchBottomPipe)
         ) {
+            axios.put('http://localhost:4001/userGames', {
+                userGameId: userGame,
+                score: score,
+            });
             setGameStarted(false);
             setScore(0);
         }

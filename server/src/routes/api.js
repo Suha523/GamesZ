@@ -88,23 +88,25 @@ router.get('/games/:gameId', function (req, res) {
 
 router.post('/userGames', function (req, res) {
     // add user game when user start a game
-    let userId = req.query.userId;
-    let gameId = req.query.gameId;
-    let userGame = req.body;
+    let userId = req.body.userId;
+    let gameId = req.body.gameId;
+    let userGame = { score: 0 };
     Game.findById(gameId, function (err, game) {
         userGame.game = game;
+        userGame.userId = userId;
         let newUserGame = new UserGame(userGame);
-        newUserGame.save();
-        User.findByIdAndUpdate(
-            userId,
-            {
-                $push: { userGames: newUserGame },
-            },
-            { new: true },
-            function (err, user) {
-                res.send(newUserGame);
-            }
-        );
+        newUserGame.save().then(() => {
+            User.findByIdAndUpdate(
+                userId,
+                {
+                    $push: { userGames: newUserGame },
+                },
+                { new: true },
+                function (err, user) {
+                    res.send(newUserGame);
+                }
+            );
+        });
     });
 });
 
@@ -125,17 +127,15 @@ router.get('/userGames/:userId', function (req, res) {
             res.send(user.userGames);
         });
 });
-
 router.put('/userGames', function (req, res) {
     // update score or isWon from state ==> score and isWon from a query
-    let userGameId = req.query.userGameId;
+    let userGameId = req.body.userGameId;
     let score = req.body.score;
-    let isWon = req.body.isWon;
+    console.log(req.body);
     UserGame.findByIdAndUpdate(
         userGameId,
         {
             score: score,
-            isWon: isWon,
         },
         { new: true },
         function (userGame) {

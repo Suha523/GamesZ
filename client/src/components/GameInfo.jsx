@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import '../assets/styles/gameInfo.css';
 
 export default function GameInfo(props) {
- 
     return (
         <Link
             className="link"
@@ -16,6 +15,7 @@ export default function GameInfo(props) {
                     ? '/flappy'
                     : '/game'
             }
+            state={`${props.game._id}`}
         >
             <div className="game-info">
                 <div className="game-card">

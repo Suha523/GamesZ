@@ -18,9 +18,11 @@ export default function Navbar(props) {
                 <Link to="/games" className="navbar-link">
                     <div className="nav-link">games</div>
                 </Link>
-                <Link to="/login" className="navbar-link">
-                    <div className="nav-link">login</div>
-                </Link>
+                {sessionStorage['userName'] ? null : (
+                    <Link to="/login" className="navbar-link">
+                        <div className="nav-link">login</div>
+                    </Link>
+                )}
             </div>
             <div className="userName">
                 <div>{sessionStorage.userName}</div>
