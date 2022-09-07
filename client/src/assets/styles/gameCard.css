@@ -12,9 +12,13 @@
     width: 25%;
     height: 400px;
     border: 1px var(--black) solid;
-    margin: 10px;
+
+    margin: 30px;
     background: linear-gradient(135deg, var(--blue), var(--purple));
     border-radius: 5px;
+    animation-name: game-card;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
 }
 
 .game-img {
@@ -30,4 +34,15 @@
 .game-header h2 {
     margin-top: 10px;
     margin-bottom: 20px;
+}
+
+@keyframes game-card {
+    from {
+        transform: scale(1.1);
+        transition: ease-out;
+    }
+    to {
+        transition: ease-in;
+        transform: scale(1);
+    }
 }
