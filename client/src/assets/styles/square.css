@@ -1,11 +1,11 @@
 .square {
-    flex: 33%;
+    /* flex: 33% 1; */
     height: 100%;
     border: 1px solid var(--black);
     cursor: pointer;
     display: grid;
     place-items: center;
-    font-size: 40px;
+    font-size: 27px;
     color: var(--black);
     width: 100%;
 }

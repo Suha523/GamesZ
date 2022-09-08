@@ -30,7 +30,7 @@ export default function FlappyBird() {
 
     useEffect(() => {
         let time;
-        if (gameHasStarted && birdPosition < 644) {
+        if (gameHasStarted && birdPosition < 565) {
             time = setInterval(() => {
                 setBirdPosition(birdPosition + GRAVITY);
             }, 24);

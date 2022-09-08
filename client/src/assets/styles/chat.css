@@ -32,7 +32,7 @@
     background: #2e7d32;
 }
 .chat-window {
-    width: 300px;
+    width: 70%;
     height: 420px;
 }
 .chat-window p {
@@ -53,7 +53,7 @@
     line-height: 45px;
 }
 .chat-window .chat-body {
-    height: calc(450px - (45px + 70px));
+    height: 210px;
     border: 1px solid #263238;
     background: #fff;
     position: relative;
@@ -127,6 +127,7 @@
 .chat-window .chat-footer input {
     height: 100%;
     flex: 85%;
+    width: 132px;
     border: 0;
     padding: 0 0.7em;
     font-size: 1em;
@@ -154,4 +155,13 @@
 }
 h3 {
     color: black;
+}
+.gameAndChat {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    justify-items: end;
+    justify-content: space-around;
+}
+.chat-window .chat-body .message-container {
+    width: 5px;
 }

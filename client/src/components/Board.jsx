@@ -106,8 +106,7 @@ export default function Board({ socket, user, room, result, setResult }) {
     });
 
     return (
-        <div>
-            <Chat socket={socket} user={user} room={room} />
+        <div className="gameAndChat">
             <div className="board-container">
                 <div className="row">
                     <Square
@@ -155,6 +154,7 @@ export default function Board({ socket, user, room, result, setResult }) {
             {isWinner ? (
                 <button onClick={restart}>restart the game</button>
             ) : null}
+            <Chat socket={socket} user={user} room={room} />
         </div>
     );
 }

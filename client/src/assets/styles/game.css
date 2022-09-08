@@ -10,7 +10,7 @@
 .game-container {
     background: linear-gradient(135deg, #52a5f7, #ad8fff);
     margin: 0;
-    padding-top: 15px;
+    padding-top: 60px;
     display: flex;
     justify-content: center;
     width: 100%;
