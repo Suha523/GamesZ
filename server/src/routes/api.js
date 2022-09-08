@@ -7,7 +7,6 @@ const UserGame = require('../models/UserGame');
 
 // dummyUsers()
 
-
 router.get('/users/:userId', function (req, res) {
     // to get a user for login
     let userId = req.params.userId;
@@ -33,7 +32,7 @@ router.post('/login', async function (req, res) {
     let userId = '';
     let status = '';
     let userInfo = await User.findOne({ userName: userName });
-    if (userInfo !== null) {
+    if (userInfo !== null && userInfo.password === password) {
         userId = JSON.stringify(userInfo._id);
         status = 'Done';
     } else {

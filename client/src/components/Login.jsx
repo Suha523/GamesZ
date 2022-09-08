@@ -35,6 +35,7 @@ export default class Login extends Component {
             console.log(res);
             if (res.data.status === 'Done') {
                 sessionStorage.setItem('userName', res.data.userName);
+                sessionStorage.setItem('userId', res.data.userId);
                 this.props.setHeaderName(res.data.userName);
                 window.location.href = 'http://localhost:3000/';
             } else {

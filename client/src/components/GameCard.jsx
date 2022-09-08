@@ -11,6 +11,16 @@ const GameCard = (props) => {
     const getGameInfo = () => {
         props.getGameInfo(props.game._id);
     };
+    
+    // const addUserGame = () => {
+    //     let userGame = {
+    //         score: 0,
+    //         isWon: false,
+    //         game: props.game,
+    //     };
+    //     props.addUserGame(userGame, props.game._id);
+    // };
+
 
     return (
         <div>

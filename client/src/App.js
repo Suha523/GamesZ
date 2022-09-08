@@ -28,7 +28,10 @@ const App = () => {
     );
     const [games, setGames] = useState([]);
     const [game, setGame] = useState({});
+   
+
     const [headerUserName, setHeaderName] = useState('');
+
     useEffect(() => {
         localStorage.setItem('theme', theme);
         document.body.className = theme;
@@ -50,6 +53,9 @@ const App = () => {
     useEffect(() => {
         firstTimeIn();
     });
+
+ 
+
     const getGameInfo = (gameId) => {
         axios
             .get(`http://localhost:4001/games/${gameId}`)
@@ -94,7 +100,14 @@ const App = () => {
                     />
                     <Route
                         path="/game"
-                        element={games ? <GameInfo game={game} /> : null}
+                        element={
+                            games ? (
+                                <GameInfo
+                                    game={game}
+                                    
+                                />
+                            ) : null
+                        }
                     />
                     <Route
                         path="/login"
